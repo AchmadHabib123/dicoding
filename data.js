@@ -72,12 +72,13 @@ function refreshDataFromBooks() {
         }
     }
 }
-document.getElementById('searchSubmit').addEventListener("click", function(event) {
+const searchButton = document.getElementById('searchSubmit');
+searchButton.addEventListener("click", function(event) {
     event.preventDefault();
     const searchBook = document.getElementById('searchBookTitle').value.toLowerCase();
     const bookList = document.querySelectorAll('.book_item > h3');
     for (books of bookList) {
-        if (searchBook !== bookList[0].innerText.toLowerCase()) {
+        if (searchBook !== books.innerText.toLowerCase()) {
             books.parentElement.style.display = "none";
         } else {
             books.parentElement.style.display = "block";
