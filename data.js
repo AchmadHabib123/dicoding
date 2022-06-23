@@ -72,17 +72,15 @@ function refreshDataFromBooks() {
         }
     }
 }
-function searchBooks() {
-    document.getElementById('searchSubmit').addEventListener("click", function(event) {
-        event.preventDefault();
-        const searchBook = document.getElementById('searchBookTitle').value.toLowerCase();
-        const bookList = document.querySelectorAll('.book_item > h3');
-        for (buku of bookList) {
-            if (searchBook !== bookList[0].innerText.toLowerCase()) {
-                buku.parentElement.style.display = "none";
-            } else {
-                buku.parentElement.style.display = "block";
-            }
+document.getElementById('searchSubmit').addEventListener("click", function(event) {
+    event.preventDefault();
+    const searchBook = document.getElementById('searchBookTitle').value.toLowerCase();
+    const bookList = document.querySelectorAll('.book_item > h3');
+    for (books of bookList) {
+        if (searchBook !== bookList[0].innerText.toLowerCase()) {
+            books.parentElement.style.display = "none";
+        } else {
+            books.parentElement.style.display = "block";
         }
-    })
-}
+    }
+})
