@@ -77,11 +77,11 @@ searchButton.addEventListener("click", function(event) {
     event.preventDefault();
     const searchBook = document.getElementById('searchBookTitle').value.toLowerCase();
     const bookList = document.querySelectorAll('.book_item > h3');
-    for (books of bookList) {
-        if (searchBook !== books.innerText.toLowerCase()) {
-            books.parentElement.style.display = "none";
+    for (book1 of bookList) {
+        if (searchBook !== book1.innerText.toLowerCase()) {
+            book1.parentElement.style.display = "none";
         } else {
-            books.parentElement.style.display = "block";
+            book1.parentElement.style.display = "block";
         }
     }
 })
